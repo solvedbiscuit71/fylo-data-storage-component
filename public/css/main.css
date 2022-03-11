@@ -194,3 +194,54 @@ main h1 {
   color: black;
   font-size: 3em;
 }
+
+/* desktop design */
+
+@media only screen and (min-width:1200px) {
+  body {
+    background-image: url("../../images/bg-desktop.png");
+    background-position: bottom -2em left;
+    background-size: auto;
+
+    gap: 2em;
+    flex-flow: row;
+  }
+
+  header {
+    width: 350px;
+  }
+
+  main {
+    --card-width: 540px;
+    --card-padding: 2em 3em;
+    height: 154px;
+    bottom: -25.75px;
+  }
+
+  main h1 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .indicator {
+    left: unset;
+    bottom: unset;
+    right: 2em;
+    top: -44px;
+
+    border-bottom-right-radius: 0;
+  }
+
+  .indicator::after {
+    content: "";
+
+    position: absolute;
+    top: calc(100% - 21px);
+    right: 0;
+
+    border-width: 21px;
+    border-style: solid;
+    border-color: transparent;
+    border-right-color: white;
+  }
+}
